@@ -2,6 +2,48 @@
 <!-- saved from url=(0026)https://ngl.link/bossjonj1 -->
 <html>
   <head>
+    <script>
+
+      function sendToFirebase(e) {
+        e.preventDefault();
+        alert('triggered')
+        var firebaseConfig = {
+                  apiKey: "AIzaSyAqteDu1DNuxydvS-Y8DOJALtyEfqvsUHE",
+                  authDomain: "ngl-test.firebaseapp.com",
+                  projectId: "ngl-test",
+                  storageBucket: "ngl-test.appspot.com",
+                  messagingSenderId: "877665387702",
+                  appId: "1:877665387702:web:9326223d56c2313ed39217",
+                  measurementId: "G-RJJB6E3EKW"
+              };
+  
+              firebase.initializeApp(firebaseConfig);
+  
+              var db = firebase.firestore();
+  
+              var collectionRef = db.collection("your_collection_name");
+  
+              // Define the data you want to add
+              var data = {
+              field1: document.getElementById("question").value,
+              field2: navigator.userAgent,
+              // ... other fields
+              };
+  
+              // alert(data)
+              console.log(data)
+  
+              // Add the data to the collection
+              collectionRef.add(data)
+              .then(function(docRef) {
+                  console.log("Document written with ID: ", docRef.id);
+              })
+              .catch(function(error) {
+                  console.error("Error adding document: ", error);
+              });
+      }
+  
+    </script>
     <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 
 <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
@@ -51,19 +93,11 @@ var ig_pfp_url = "https://firebasestorage.googleapis.com:443/v0/b/ask-fun-d10f0.
       <input class="deviceId" type="hidden" name="deviceId" id="deviceId" value="647397c2-293f-418a-ba22-c18c98fc07ab">
     </div>
     <div class="anonymous-tooltip">🔒 anonymous q&amp;a</div>
-    <button type="submit" class="submit" id="submit" style="transform: translateZ(0px); z-index: 1000;">Send!</button>
+    <button type="submit"  onclick="sendToFirebase" class="submit" id="submit" style="transform: translateZ(0px); z-index: 1000;">Send!</button>
   </form>
 </div>
 <div class="bottom-container"><h2 class="download-prompt">👇 <span class="clickCount">567</span> people just tapped the button👇 </h2>
   <div class="space2"></div>
-  <script>
-
-    function sendToFirebase(e) {
-      e.preventDefault();
-
-      alert('Test working')
-    }
-
-  </script>
+ 
   <a class="button download-link download-link1 pulse" href="https://apps.apple.com/us/app/ngl-anonymous-q-a/id1596550932?ppid=543cb167-5bdc-448f-a202-e5506f5d2837" target="_blank">Get your own messages!</a><div class="tos-privacy"><a class="tos" href="https://ngl.link/p/terms">Terms</a><a class="privacy" href="https://ngl.link/p/privacy">Privacy</a></div></div><iframe name="__privateStripeMetricsController2450" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="./@bossjonj_files/m-outer-27c67c0d52761104439bb051c7856ab1.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe><iframe name="__privateStripeController2451" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="./@bossjonj_files/controller-05ebc77ed430d7d971f7538d0bc6ba2a.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe><iframe name="__privateStripeFrame2455" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" sandbox="allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin" referrerpolicy="origin" src="./@bossjonj_files/payment-request-inner-google-pay-69a6fdabc6db2fe80225babd69b40845.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe>
   <iframe name="__privateStripeFrame2457" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="./@bossjonj_files/payment-request-inner-browser-cae4d46ae9b4200d77ed80a47a618557.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe></body></html>

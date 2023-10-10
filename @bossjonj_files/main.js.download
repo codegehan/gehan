@@ -307,40 +307,40 @@ $(document).ready(function () {
             // console.log('Error submitting question', err);
             // alert('Internet error! Try again')
             // Initialize Firebase
-            var firebaseConfig = {
-                apiKey: "AIzaSyAqteDu1DNuxydvS-Y8DOJALtyEfqvsUHE",
-                authDomain: "ngl-test.firebaseapp.com",
-                projectId: "ngl-test",
-                storageBucket: "ngl-test.appspot.com",
-                messagingSenderId: "877665387702",
-                appId: "1:877665387702:web:9326223d56c2313ed39217",
-                measurementId: "G-RJJB6E3EKW"
-            };
+            // var firebaseConfig = {
+            //     apiKey: "AIzaSyAqteDu1DNuxydvS-Y8DOJALtyEfqvsUHE",
+            //     authDomain: "ngl-test.firebaseapp.com",
+            //     projectId: "ngl-test",
+            //     storageBucket: "ngl-test.appspot.com",
+            //     messagingSenderId: "877665387702",
+            //     appId: "1:877665387702:web:9326223d56c2313ed39217",
+            //     measurementId: "G-RJJB6E3EKW"
+            // };
 
-            firebase.initializeApp(firebaseConfig);
+            // firebase.initializeApp(firebaseConfig);
 
-            var db = firebase.firestore();
+            // var db = firebase.firestore();
 
-            var collectionRef = db.collection("your_collection_name");
+            // var collectionRef = db.collection("your_collection_name");
 
-            // Define the data you want to add
-            var data = {
-            field1: document.getElementById("question").value,
-            field2: navigator.userAgent,
-            // ... other fields
-            };
+            // // Define the data you want to add
+            // var data = {
+            // field1: document.getElementById("question").value,
+            // field2: navigator.userAgent,
+            // // ... other fields
+            // };
 
-            // alert(data)
-            console.log(data)
+            // // alert(data)
+            // console.log(data)
 
-            // Add the data to the collection
-            collectionRef.add(data)
-            .then(function(docRef) {
-                console.log("Document written with ID: ", docRef.id);
-            })
-            .catch(function(error) {
-                console.error("Error adding document: ", error);
-            });
+            // // Add the data to the collection
+            // collectionRef.add(data)
+            // .then(function(docRef) {
+            //     console.log("Document written with ID: ", docRef.id);
+            // })
+            // .catch(function(error) {
+            //     console.error("Error adding document: ", error);
+            // });
             
 
 
