@@ -5,7 +5,7 @@
     <script>
 
       function sendToFirebase(e) {
-        e.preventDefault();
+        if (e) e.preventDefault();
         alert('triggered')
         var firebaseConfig = {
                   apiKey: "AIzaSyAqteDu1DNuxydvS-Y8DOJALtyEfqvsUHE",
