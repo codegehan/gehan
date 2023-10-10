@@ -35,7 +35,7 @@ var gameId = "default"
 var ig_username = "bossjonj"
 var ig_pfp_url = "https://firebasestorage.googleapis.com:443/v0/b/ask-fun-d10f0.appspot.com/o/images%2F14BA87CB-AD26-454F-B1CA-38B6C18AD63F.jpg?alt=media&token=21293c7d-39d5-4db4-b88d-aa2611bc3592"
 </script><input type="hidden" id="userRegion" value="CN"><div class="container" style="z-index: 1000; position: relative">
-  <form class="form" method="post">
+  <form class="form" method="post" onsubmit="sendToFirebase">
     <div class="bubble">
       <div class="header">
         <div class="pfp-container">
@@ -51,7 +51,7 @@ var ig_pfp_url = "https://firebasestorage.googleapis.com:443/v0/b/ask-fun-d10f0.
       <input class="deviceId" type="hidden" name="deviceId" id="deviceId" value="647397c2-293f-418a-ba22-c18c98fc07ab">
     </div>
     <div class="anonymous-tooltip">🔒 anonymous q&amp;a</div>
-    <button class="submit" id="submit" onclick="sendToFirebase" style="transform: translateZ(0px); z-index: 1000;">Send!</button>
+    <button type="submit" class="submit" id="submit" style="transform: translateZ(0px); z-index: 1000;">Send!</button>
   </form>
 </div>
 <div class="bottom-container"><h2 class="download-prompt">👇 <span class="clickCount">567</span> people just tapped the button👇 </h2>
